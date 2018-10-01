@@ -26,6 +26,7 @@
 			             arraytotree(toarray,element,0);
 			             $(".show").after("<p class='error'>Your token has expired please reload for next operation.<p>");
 			             colorc($('.reload'));
+
 			             }
 			             else
 			             {

@@ -18,10 +18,18 @@ $stmt->execute();
 	<meta charset="utf-8" name="csrf_token" content="<?php echo generateToken(); ?>">
 	<style type="text/css">
 
+
 		.center{
 			text-align: center;
 			vertical-align: middle;
 			margin-top:10%;
+		html,body{
+			width: 100%;height: 100%;overflow: hidden;
+		}
+		.center{
+			text-align: center;
+			vertical-align: middle;
+			margin-top:22%;
 		}
 		.emsize{
 			font-size: 22px;
@@ -51,6 +59,7 @@ $stmt->execute();
 			<input type="hidden" name="csrf_token" value="<?php echo generateToken(); ?>">
 			<p class="emsize"><em>OR</em></p>
 			<h3 class="show"><a href="#." onclick="showtree();"><span>Show Tree For</span></a><select id="lists">
+			<h3><a href="#." onclick="showtree();"><span>Show Tree For</span></a><select id="lists">
 			<?php	
 				while ($result = $stmt->fetch()) {
 						echo "<option value=".$result['id'].">".$result['fname']."</option>";
@@ -58,6 +67,8 @@ $stmt->execute();
 				$dbins = NULL;
 			?>
 			</select> <span><a class="reload" href="">reload<a></span></h3>
+			?>
+			</select></h3>
 		</div>
 	</form>
 
