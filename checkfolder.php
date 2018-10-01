@@ -16,7 +16,6 @@ if ($_POST['csrf_token'] === $_SESSION['csrf_token']) {
 
 if (isset($_POST['urlvalue'])) {
 	$urlvalue = $_POST['urlvalue'];
-	echo "hhi<br><Br>";
 	$db = new Database();
 	$dbins = $db->connect();
 	// Insert to database
@@ -134,15 +133,6 @@ else
 	echo "Please enter a url";
 	// session_unset();
 	// generateToken();
-}
-
-}
-
-else
-{
-	echo "Access mismatch. Try reloading the form";
-}
-
 }
 
 }
